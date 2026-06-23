@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Contact Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-header">
+        <h2>Contact Saver</h2>
+    </div>
+
+    <div class="main-content">
+        <div class="contact-card">
+            <span class="label">CURRENT CONTACT</span>
+            <div id="contactName" class="contact-name">Loading...</div>
+        </div>
+
+        <textarea id="noteInput" placeholder="Add a note..."></textarea>
+
+        <div class="button-group">
+            <button id="saveContact" class="btn-primary">Save Contact</button>
+            <button id="exportCSV" class="btn-secondary">Export CSV</button>
+        </div>
+        
+        <div class="group-card">
+            <span class="label">GROUP EXTRACTION</span>
+            <div class="group-info">
+                <span id="autoScrapeStatus" class="hint-text">(Open members list in WhatsApp first)</span>
+            </div>
+            <button id="autoScrape" class="btn-primary" style="margin-top: 10px; background-color: #005c4b; width: 100%;">Auto-Extract All Members</button>
+        </div>
+        
+        <div class="saved-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h3 style="margin: 0;">Saved Contacts</h3>
+                <button id="clearAllContacts" style="background: none; border: none; color: #dc3545; cursor: pointer; font-size: 12px; text-decoration: underline;">Clear All</button>
+            </div>
+            <ul id="savedContacts"></ul>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
